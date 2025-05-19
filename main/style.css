@@ -124,7 +124,7 @@ body::before {
 }
 
 .label {
-  margin-top: 10px;
+  color: white;
   font-size: 0.9rem;
 }
 
