@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Raynen</title>
+  <link rel="stylesheet" href="main/style.css" />
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" rel="stylesheet" />
+</head>
+<body>
+  <div class="announcement-bar">⚡ Test Announcement</div>
+
+  <h1 class="title"><span id="typed-text"></span><span id="cursor">|</span></h1>
+
+  <div class="volume-control">
+    <input type="range" id="volumeSlider" min="0" max="1" step="0.01" value="1">
+  </div>
+
+  <div class="disks-container">
+    <!-- Most recent -->
+    <div class="disk">
+      <img src="images/be_more.png" class="album-cover" />
+      <img src="images/disk_yellow.png" class="spinning-disk" />
+      <audio src="music/be_more.mp3" class="disk-audio"></audio>
+      <button class="playPauseBtn">Play</button>
+      <p class="label">Most Recent</p>
+    </div>
+    <!-- seventeen -->
+    <div class="disk">
+      <img src="images/seventeen.png" class="album-cover" />
+      <img src="images/disk_green.png" class="spinning-disk" />
+      <audio src="music/seventeen.mp3" class="disk-audio"></audio>
+      <button class="playPauseBtn">Play</button>
+    </div>
+    <!-- somethingisdiffernet -->
+    <div class="disk">
+      <img src="images/somethingisdifferent.png" class="album-cover" />
+      <img src="images/disk_grey.png" class="spinning-disk" />
+      <audio src="music/somethingisdifferent.mp3" class="disk-audio"></audio>
+      <button class="playPauseBtn">Play</button>
+    </div>
+    <!-- monster -->
+    <div class="disk">
+      <img src="images/monster.png" class="album-cover" />
+      <img src="images/disk_red.png" class="spinning-disk" />
+      <audio src="music/monster.mp3" class="disk-audio"></audio>
+      <button class="playPauseBtn">Play</button>
+    </div>
+    <!-- noonecanhearyou -->
+    <div class="disk">
+      <img src="images/noonecanhearyou.png" class="album-cover" />
+      <img src="images/disk_orange.png" class="spinning-disk" />
+      <audio src="music/noonecanhearyou.mp3" class="disk-audio"></audio>
+      <button class="playPauseBtn">Play</button>
+    </div>
+  </div>
+
+  <div class="socials-bar">
+    <p>Socials</p>
+    <div class="social-icons">
+      <a href="https://open.spotify.com/artist/1nuhZD87JUubBVakECsGDQ" target="_blank" rel="noopener noreferrer">
+        <i class="fab fa-spotify"></i>
+      </a>
+      <a href="https://soundcloud.com/raaynen" target="_blank" rel="noopener noreferrer">
+        <i class="fa-brands fa-soundcloud"></i>
+      </a>
+      <a href="https://instagram.com/raaynen" target="_blank" rel="noopener noreferrer">
+        <i class="fab fa-instagram"></i>
+      </a>
+      <a href="https://tiktok.com/raaynen" target="_blank" rel="noopener noreferrer">
+        <i class="fa-brands fa-tiktok"></i>
+      </a>
+    </div>
+    <small class="tag">Made by Perk</small>
+  </div>
+  
+  
+
+  <script src="main/script.js"></script>
+</body>
+</html>

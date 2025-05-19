@@ -1,0 +1,215 @@
+html, body {
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+  background-color: black;
+  font-family: Arial, sans-serif;
+  color: rgb(0, 0, 0);
+  text-align: center;
+  position: relative;
+  height: auto;
+}
+
+body {
+  min-height: 100vh;
+}
+
+body::before {
+  display: none;
+}
+
+
+.announcement-bar {
+  color: white;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  padding: 10px 0;
+  background: rgba(34, 34, 34, 0.6);
+  backdrop-filter: blur(8px);
+  font-weight: bold;
+  z-index: 1000;
+}
+
+.title {
+  position: relative;
+  font-size: 3rem;
+  margin-top: 60px;
+  color: white;
+  z-index: 1;
+  text-shadow: -3px 0 2px black;
+}
+
+.title::before,
+.title::after {
+  content: '';
+  position: absolute;
+  top: -12px;
+  left: -12px;
+  width: calc(100% + 24px);
+  height: calc(100% + 24px);
+  pointer-events: none;
+  background:
+    radial-gradient(circle at 5% 10%, white 1.5px, transparent 2px),
+    radial-gradient(circle at 15% 25%, white 1.2px, transparent 2px),
+    radial-gradient(circle at 25% 40%, white 1.5px, transparent 2px),
+    radial-gradient(circle at 35% 70%, white 1px, transparent 2px),
+    radial-gradient(circle at 45% 15%, white 1.8px, transparent 2px),
+    radial-gradient(circle at 55% 55%, white 1.4px, transparent 2px),
+    radial-gradient(circle at 65% 35%, white 1.2px, transparent 2px),
+    radial-gradient(circle at 75% 80%, white 1.6px, transparent 2px),
+    radial-gradient(circle at 85% 20%, white 1.3px, transparent 2px),
+    radial-gradient(circle at 95% 60%, white 1.1px, transparent 2px);
+  background-repeat: no-repeat;
+  filter: drop-shadow(0 0 3px white);
+  opacity: 0.9;
+  animation: sparkle-dense 2s infinite alternate;
+  z-index: -1;
+}
+
+.title::after {
+  animation-delay: 1s;
+  opacity: 0.7;
+}
+
+@keyframes sparkle-dense {
+  0%, 100% {
+    opacity: 0.8;
+    transform: translate(0, 0) scale(1);
+  }
+  50% {
+    opacity: 1;
+    transform: translate(2px, -2px) scale(1.05);
+  }
+}
+
+.volume-control {
+  margin: 20px auto;
+  display: flex;
+  justify-content: center;
+}
+
+#volumeSlider {
+  width: 200px;
+}
+
+.disks-container {
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+  flex-wrap: wrap;
+  margin: 40px 0 140px;
+}
+
+.disk {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 30px;
+}
+
+.album-cover {
+  width: 120px;
+  height: 120px;
+  object-fit: cover;
+  border-radius: 8px;
+  margin-bottom: 10px;
+}
+
+.spinning-disk {
+  width: 208px;
+  height: 246px;
+  object-fit: contain;
+  transform-origin: center;
+}
+
+.label {
+  margin-top: 10px;
+  font-size: 0.9rem;
+}
+
+.playPauseBtn {
+  margin-top: 10px;
+  padding: 8px 16px;
+  font-size: 1rem;
+  background-color: white;
+  color: black;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.playPauseBtn:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 10px white;
+}
+
+@keyframes spin {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+.socials-bar {
+  position: fixed;
+  bottom: 0px;
+  width: 100%;
+  background: rgba(34, 34, 34, 0.6);
+  backdrop-filter: blur(8px);
+  color: white;
+  font-weight: bold;
+  text-align: center;
+  font-size: 1.2rem;
+  padding: 20px 0;
+  z-index: 1000;
+}
+
+.social-icons {
+  margin-top: 12px;
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+}
+
+.social-icons a {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+}
+
+.social-icons i {
+  margin-left: 15px;
+  font-size: 1.8rem;
+  color: white;
+  transition: transform 0.3s, text-shadow 0.3s;
+}
+
+.social-icons i:hover {
+  transform: scale(1.2);
+  text-shadow: 0 0 10px white;
+}
+
+.tag {
+  position: absolute;
+  left: 10px;
+  bottom: 10px;
+  font-size: 0.75rem;
+  font-weight: normal;
+  color: #ccc;
+}
+
+#cursor {
+  display: inline-block;
+  font-weight: bold;
+  font-size: 3rem;
+  color: white;
+  animation: blink 0.7s infinite;
+  margin-left: 5px;
+}
+
+@keyframes blink {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0; }
+}
+
